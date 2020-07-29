@@ -1,0 +1,23 @@
+<div class="container" >
+    <!-- <div class="col-sm-4"> -->
+        <form class="form-group" (ngSubmit)="save()">
+ <div>
+    <label for="pid">Produtid</label>
+    <input type="text" id="pid" class="form-control" [(ngModel)]="model.productid" name="productid">
+ </div>
+  <div>
+      <label for="pname">Product name</label>
+      <input type="text" id="pname" class="form-control" [(ngModel)]="model.productname" name="productname">
+  </div>     
+  <div>     
+      <label for="price">Price</label>
+      <input type="text" id="price" class="form-control" [(ngModel)]="model.price" name="price">
+</div>
+<div>
+       <button >Save</button>
+</div>
+        </form>
+    
+
+
+</div>

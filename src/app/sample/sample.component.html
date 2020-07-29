@@ -1,0 +1,24 @@
+<p>hi</p>
+title is {{title}}
+ 
+<!-- //*for loop*// -->
+
+ <!-- <div *ngFor="let i for colors">
+    {{i}} -->
+
+<br>
+
+<!-- <select name="" id="">
+    <option value="" *ngFor="let name of dpt">{{dpt}}</option></select> -->
+
+    
+        <select (click)="color=$event.target.value;check()" name="" id=""> 
+            <option value="{{i}}" *ngFor="let i of colors">{{i}}</option>
+    </select>
+   
+
+<p [ngStyle]="{'color':color}">welcome</p>
+
+<p [ngClass]="'blueActive'">expertlab</p>
+
+<p [ngClass]="{'blueActive':condition==true,'blueDisabled':condition==false}">good</p>
