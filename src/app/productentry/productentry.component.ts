@@ -20,6 +20,7 @@ this.model=new Product("","",0)
    console.log("fuctioncalled")
 console.log(this.model)
  }}
-  
+
+ 
 
 
