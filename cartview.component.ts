@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ShoppingService } from '../shopping.service';
 import { ShoppingcartComponent } from '../shoppingcart/shoppingcart.component';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-cartview',
@@ -12,8 +13,12 @@ import { ShoppingcartComponent } from '../shoppingcart/shoppingcart.component';
 export class CartviewComponent implements OnInit {
 cartitems=[]
 total = 0;
+
 // items = [];
-  constructor( private obj:ShoppingService) { }
+  constructor( private obj:ShoppingService) { 
+   
+ 
+  }
 
   ngOnInit(): void {
     this.cartitems=this.obj.cart
@@ -21,25 +26,17 @@ total = 0;
     this.cartitems.forEach(item =>{
       this.total+= item.quatity * item.price
     })
-}
+   
+    // let productExists:false
+
+    // for(let i in this.cartitems){
+
+    //   if(this.cartitems[i].productid===productid)
+    // } 
+}}
 
 
-// loadCartview(obj){
-// this.total=0
 
-// // let cart = JSON.parse(localStorage.getItem('cart'));
-// // for (var i = 0; i < cart.length; i++) {
-//   // let item = JSON.parse(cart[i]);
-
-//   // this.items.push({
-//     product: obj.product
-//     quatity: obj.quatity
-
-//   this.total += obj.product.price * obj.quatity;
-// }
-// }
-  
-}
 
 
 
