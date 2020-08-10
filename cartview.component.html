@@ -1,0 +1,21 @@
+<div *ngIf="cartitems.length==0" class="alert alert-info">Your Cart is Empty  </div>
+
+ <table class="table" border="1px" >
+<thead class="i">
+    <th >Name</th>
+        <th>Price</th>
+        <th>Discription</th>
+        <th> Image</th>
+        <th> Quatity</th>
+        </thead>
+ <tr class="a" *ngFor="let obj of cartitems">
+  <td> {{obj.name}}</td>
+   <td> {{obj.price | currency:'INR'}}</td>
+   <td>{{obj.discription}}</td> 
+   <td><img src="{{obj.path}}" width="150px" height="150px"/></td>
+<td>{{obj.quatity}} </td>
+</tr>
+    <td class="h"><strong>Total</strong></td>
+    <td class="h">{{total | currency:'INR'}}</td>
+
+</table>
