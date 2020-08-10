@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<div class="row">
+<div class="col-md-10">
+<table class="table" border="1px">
+    <thead class="h">
+        <th>Name</th>
+        <th>Price</th>
+        <th>Discription</th>
+        <th> Image</th>
+        <th> Quatity</th>
+        
+    </thead>
+    <tr *ngFor="let product of list" class="i">
+        <td>{{product.name}}</td>
+        <td>{{product.price | currency:'INR'}}</td>
+        <td>{{product.discription}}</td>
+        <td><img src="{{product.path}}" width="150px" height="150px"/></td>
+        <td>{{product.quatity}} <button >+</button></td>
+        <td><button (click)="addtocart(product)">Addtocart</button></td>
+</tr></table></div>
+<div class="col">
+<app-viewshopping></app-viewshopping>
+</div>
+
+</div>
+
+
+
